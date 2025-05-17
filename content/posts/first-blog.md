@@ -2,6 +2,9 @@
 title: 純文字講解如何開個blog
 date: 2025-01-22T16:22:23+08:00
 draft: false
+categories: blog
+tags:
+  - tech
 ---
 
 > 前言 
