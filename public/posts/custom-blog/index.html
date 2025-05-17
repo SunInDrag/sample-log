@@ -3,7 +3,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>純文字講解如何開個blog | VSC4T-SAMPLE</title>
+  <title>自定義更改紀錄 | VSC4T-SAMPLE</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -177,22 +177,7 @@
         <span>TABLE OF CONTENTS</span>
       </div>
       <div class="section-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#下載">下載</a>
-      <ul>
-        <li><a href="#命令行的程式下載器-chocolatey">命令行的程式下載器-chocolatey</a></li>
-        <li><a href="#用-chocolatey-安裝-hugo-和-git">用 Chocolatey 安裝 HUGO 和 GIT</a></li>
-      </ul>
-    </li>
-    <li><a href="#hugo建站">HUGO建站</a></li>
-    <li><a href="#上傳到github">上傳到Github</a>
-      <ul>
-        <li><a href="#新建一個repositories">新建一個Repositories</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+        <nav id="TableOfContents"></nav>
       </div>
     </div>
     
@@ -225,9 +210,9 @@
       <div class="section-content">
         
           
-          <div class="tag-item" data-href="/tags/tech">
+          <div class="tag-item" data-href="/tags/hugo">
             <i class="fas fa-tag"></i>
-            <a href="/tags/tech">tech</a>
+            <a href="/tags/hugo">Hugo</a>
           </div>
         
       </div>
@@ -240,25 +225,25 @@
     <div class="tab-bar">
       <div class="tab active">
         <i class="fas fa-file-alt"></i>
-        <span>純文字講解如何開個blog.md</span>
+        <span>自定義更改紀錄.md</span>
       </div>
     </div>
     
     <div class="content-area">
       <article class="post-content">
         <div class="post-header">
-          <h1>純文字講解如何開個blog</h1>
+          <h1>自定義更改紀錄</h1>
           <div class="post-meta">
             <span class="date">
               <i class="fas fa-calendar-alt"></i>
-              2025-01-22
+              2024-11-27
             </span>
             
               <span class="categories">
                 <i class="fas fa-folder"></i>
                 <div class="categories-list">
                   
-                    <a href="/categories/blog" class="category-item-post">blog</a>
+                    <a href="/categories/hugo" class="category-item-post">hugo</a>
                   
                 </div>
               </span>
@@ -268,7 +253,7 @@
                 <i class="fas fa-tags"></i>
                 <div class="tags-list">
                   
-                    <a href="/tags/tech" class="tag-item-post">tech</a>
+                    <a href="/tags/hugo" class="tag-item-post">Hugo</a>
                   
                 </div>
               </span>
@@ -277,151 +262,29 @@
         </div>
         
         <div class="post-body vscode-markdown">
-          <blockquote>
-<p>前言
-為何要用HUGO：
-因為我先學這個，用HEXO之類的也都可以
-用wordpress不好嗎：
-服務器搞起來更麻煩，免費的GITHUB更方便</p>
-</blockquote>
-<p>⚠️ Warning
-本教程給電腦小白、windows用戶，若有錯處那是因為本人也是個小白，程式一點都不懂</p>
-<h2 id="下載">下載</h2>
-<p>萬事開頭都要先下載
-<a href="https://gohugo.io/installation/windows/">HUGO官網</a> 有給如何下載的詳細步驟</p>
-<h3 id="命令行的程式下載器-chocolatey">命令行的程式下載器-chocolatey</h3>
-<p>首先我們先下載 <a href="https://chocolatey.org/">chocolatey</a>
-用系統管理員權限打開PowerShell</p>
-<blockquote>
-<p>PS：在命令介面直接點右鍵就能貼上命令行</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>Set<span style="color:#f92672">-</span>ExecutionPolicy Bypass <span style="color:#f92672">-</span>Scope Process <span style="color:#f92672">-</span>Force; [System<span style="color:#f92672">.</span>Net<span style="color:#f92672">.</span>ServicePointManager]::SecurityProtocol <span style="color:#f92672">=</span> [System<span style="color:#f92672">.</span>Net<span style="color:#f92672">.</span>SecurityProtocolType]::Tls12; iex ((New<span style="color:#f92672">-</span><span style="color:#a6e22e">Object</span> System<span style="color:#f92672">.</span>Net<span style="color:#f92672">.</span>WebClient)<span style="color:#f92672">.</span>DownloadString(<span style="color:#e6db74">&#39;https://community.chocolatey.org/install.ps1&#39;</span>))
-</span></span></code></pre></div><h3 id="用-chocolatey-安裝-hugo-和-git">用 Chocolatey 安裝 HUGO 和 GIT</h3>
-<p>用系統管理員權限打開CMD</p>
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback"># 下載HUGO 和 GIT命令行
-choco install hugo -y
-choco install git -y
-</code></pre><p>基本上你現在打開CMD
-打 <code>hugo</code> <code>git</code> 就能有命令行的反應了
-如果沒有你要去環境變數把他們加進去</p>
-<h2 id="hugo建站">HUGO建站</h2>
-<ol>
-<li>找一個你想要寫部落格的資料夾上方地址位置打開CMD</li>
-<li>建立你部落格名稱的資料夾
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">hugo new site mysite
-# mysite是我資料夾的名稱
-</code></pre>這樣你就能看到一個叫mysite、裡面一堆配置文件的資料夾產生了</li>
-<li>選一個主題，我這裡選 <a href="https://github.com/athul/archie">archie</a>
-進入網站目錄
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">cd mysite
-</code></pre>安裝主題
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">git clone https://github.com/athul/archie.git themes/archie
-</code></pre></li>
-<li>現在別用命令行了，直接去你mysite底下的資料夾裡面，會有一個叫 <code>config.toml</code> 的文件 用記事本或什麼其他的編輯器打開來，你會看到裡面幾行而已
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">baseURL = &#39;https://example.org/&#39;
-languageCode = &#39;en-us&#39;
-title = &#39;My New Hugo Site&#39;
-</code></pre>你可以直接去主題的readme或是你下載的theme路徑裡 <code>mysite\themes\archie\theme.toml</code> 看看他有沒有推薦的配置選項，直接用他的預設也可以 ex：
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">baseURL = &#34;https://athul.github.io/archie/&#34;
- languageCode = &#34;zh-tw&#34;
- title = &#34;我的網站&#34;
- theme=&#34;archie&#34;
- copyright = &#34;© Athul&#34;
- # Code Highlight
- pygmentsstyle = &#34;monokai&#34;
- pygmentscodefences = true
- pygmentscodefencesguesssyntax = true
- disqusShortname = &#34;yourDisqusShortname&#34;
- paginate=3 # articles per page
- [params]
-   mode=&#34;auto&#34; # color-mode → light,dark,toggle or auto
-   useCDN=false # don&#39;t use CDNs for fonts and icons, instead serve them locally.
-   subtitle = &#34;Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)&#34;
-   mathjax = true # enable MathJax support
-   katex = true # enable KaTeX support
- # Social Tags
- [[params.social]]
- name = &#34;GitHub&#34;
- icon = &#34;github&#34;
- url = &#34;https://github.com/athul/archie&#34;
- [[params.social]]
- name = &#34;Twitter&#34;
- icon = &#34;twitter&#34;
- url = &#34;https://twitter.com/athulcajay/&#34;
- [[params.social]]
- name = &#34;GitLab&#34;
- icon = &#34;gitlab&#34;
- url = &#34;https://gitlab.com/athul/&#34;
- # Main menu Items
- [[menu.main]]
- name = &#34;Home&#34;
- url = &#34;/&#34;
- weight = 1
- [[menu.main]]
- name = &#34;All posts&#34;
- url = &#34;/posts&#34;
- weight = 2
- [[menu.main]]
- name = &#34;About&#34;
- url = &#34;/about&#34;
- weight = 3
- [[menu.main]]
- name = &#34;Tags&#34;
- url = &#34;/tags&#34;
- weight = 4
-</code></pre></li>
-<li>新增一個文章 首先你能在 <code>\mysite\archetypes\default.md</code> 裡面看到下面的樣式
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">+++
-date = &#34;{{ .Date }}&#34;
-draft = true
-title = &#34;{{ replace .File.ContentBaseName &#39;-&#39; &#39; &#39; | title }}&#34;
-+++
-</code></pre>這是之後在你markdown裡面會自動生成的表頭，格式是toml， 它會記錄你這文件建立的時間、標題、要不要發布、還有它的其他種種狀態 我會建議你換成下面的yaml格式
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">---
-date: &#39;{{ .Date }}&#39;
-draft: false
-title: &#39;{{ replace .File.ContentBaseName &#34;-&#34; &#34; &#34; | title }}&#39;
----
-現在你可以去CMD新建一個文章了
-</code></pre><blockquote>
-<p>first-post可以自訂義名稱</p>
-</blockquote>
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">hugo new posts/first-post.md
-</code></pre></li>
-<li>看看你的網站如何
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">hugo server
-</code></pre>去 <a href="http://localhost:1313/">http://localhost:1313/</a> 看看</li>
-</ol>
-<h2 id="上傳到github">上傳到Github</h2>
-<h3 id="新建一個repositories">新建一個Repositories</h3>
-<p>創建一個公開的Repositories，我叫它blog
-然後他就會給你一個空的倉庫，記住這個倉庫的地址大概如下： <code>https://github.com/@username/blog.git</code></p>
-<blockquote>
-<p>@username是你自己的帳號名</p>
-</blockquote>
-<p>現在回到你的mysite資料夾，打開CMD準備用GIT上傳
-這時候你的GIT會要你登入，為求偷懶我是用瀏覽器登入
-但未來你要方便登入還是要配置ssh來方便登入</p>
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">git init
-git remote add origin https://github.com/@username/blog.git
-</code></pre><p>然後
-重點來了</p>
-<p>git不能直接處理hugo的檔案變成網站，你要做的事是把 <code>mysite\public\</code> 這個資料夾裡用 <code>hugo server</code> 生成的html上傳到github上面</p>
-<pre tabindex="0"><code class="language-fallback" data-lang="fallback">git checkout --orphan gh-pages # 創建一个空的 gh-pages 分支
-git --work-tree=public add --all
-git --work-tree=public commit -m &#34;上傳到 GitHub Pages&#34;
-git push -u origin gh-pages
-</code></pre>
+          <ul>
+<li>
+<p><input disabled="" type="checkbox"> <strong>最後上傳時間</strong>
+一直不能成功&hellip;我之後再試試看吧</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> code block 會被縮進</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 代碼高亮</p>
+</li>
+</ul>
+
         </div>
         
         
         <nav class="post-nav">
           
-            <a class="prev" href="/posts/custom-blog/">
-              <i class="fas fa-chevron-left"></i>
-              自定義更改紀錄
-            </a>
           
+            <a class="next" href="/posts/first-blog/">
+              純文字講解如何開個blog
+              <i class="fas fa-chevron-right"></i>
+            </a>
           
         </nav>
       </article>
