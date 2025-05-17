@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://sample-log.vercel.app/'
 languageCode = 'zh-tw'
 title = 'VSC4T-SAMPLE'
 theme = 'VSC4T'
