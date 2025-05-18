@@ -1,8 +1,8 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "Ct"
 tags: ["first"]
 categories: ["post"]
-date: {{ .Date }}
+date: 2025-05-18T11:08:05+08:00
 draft: false
 author: "polarbear"
 showToc: true
@@ -15,5 +15,5 @@ searchHidden: true
 ShowReadingTime: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
-lastmod: {{ .Date }}
+lastmod: 2025-05-18T11:08:05+08:00
 ---
