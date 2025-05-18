@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>分類 on VSC4T-SAMPLE</title>
+    <title>分類 on VSC4T-HUGO</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in 分類 on VSC4T-SAMPLE</description>
+    <description>Recent content in 分類 on VSC4T-HUGO</description>
     <generator>Hugo</generator>
     <language>zh-tw</language>
     <lastBuildDate>Wed, 22 Jan 2025 16:22:23 +0800</lastBuildDate>
@@ -21,6 +21,27 @@
       <pubDate>Wed, 27 Nov 2024 23:24:57 +0000</pubDate>
       <guid>http://localhost:1313/categories/hugo/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Bookmark</title>
+      <link>http://localhost:1313/categories/bookmark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/bookmark/</guid>
+      <description>只是個搬運工</description>
+    </item>
+    <item>
+      <title>Technique</title>
+      <link>http://localhost:1313/categories/technique/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/technique/</guid>
+      <description>使用紀錄</description>
+    </item>
+    <item>
+      <title>隨筆</title>
+      <link>http://localhost:1313/categories/gossip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/gossip/</guid>
+      <description>紀錄想法</description>
     </item>
   </channel>
 </rss>
